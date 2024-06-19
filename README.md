@@ -7,7 +7,7 @@
 
 Visit the hosted site : 
 
-#### [ https://bitespeed-backend-may-2024-jagruthvasa.onrender.com/identify ]
+#### [ https://jagruthvasa.github.io/Ellty-fullstack-june-2024-jagruthvasa/ ]
 
 ### Technologies Used
 
