@@ -7,7 +7,7 @@
 
 Visit the hosted site : 
 
-#### [[ https://bitespeed-backend-may-2024-jagruthvasa.onrender.com/identify]( Click here) ]
+#### [ https://bitespeed-backend-may-2024-jagruthvasa.onrender.com/identify ]
 
 ### Technologies Used
 
