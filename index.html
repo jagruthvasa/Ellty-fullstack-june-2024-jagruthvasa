@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ellty Assignment</title>
+      <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+      <div class="element">
+            <div class="pages">
+                  <div class="checkbox-container">
+                        <div class="checkbox-item">
+                              <label for="all">All pages</label>
+                              <input type="checkbox" id="all" class="box">
+                        </div>
+                        <p class="border"></p>
+                        <div class="checkbox-scroll">
+                              <div class="checkbox-item">
+                                    <label for="box1">Page 1</label>
+                                    <input type="checkbox" id="box1" class="box">
+                              </div>
+                              <div class="checkbox-item">
+                                    <label for="box2">Page 2</label>
+                                    <input type="checkbox" id="box2" class="box">
+                              </div>
+                              <div class="checkbox-item">
+                                    <label for="box3">Page 3</label>
+                                    <input type="checkbox" id="box3" class="box">
+                              </div>
+                              <div class="checkbox-item">
+                                    <label for="box4">Page 4</label>
+                                    <input type="checkbox" id="box4" class="box">
+                              </div>
+                              <div class="checkbox-item">
+                                    <label for="box5">Page 5</label>
+                                    <input type="checkbox" id="box5" class="box">
+                              </div>
+                              <div class="checkbox-item">
+                                    <label for="box6">Page 6</label>
+                                    <input type="checkbox" id="box6" class="box">
+                              </div>
+                        </div>
+                        <p class="border"></p>
+                        <div class="checkbox-item">
+                              <button class="button">Done</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      
+      <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                  const allCheckbox = document.getElementById("all");
+                  const checkboxes = document.querySelectorAll(".checkbox-scroll .box");
+
+                  allCheckbox.addEventListener("change", function () {
+                        checkboxes.forEach(checkbox => {
+                              checkbox.checked = allCheckbox.checked;
+                        });
+                  });
+
+                  checkboxes.forEach(checkbox => {
+                        checkbox.addEventListener("change", function () {
+                              if (!this.checked) {
+                                    allCheckbox.checked = false;
+                              } else {
+                                    const allChecked = Array.from(checkboxes).every(
+                                          cb => cb.checked);
+                                    allCheckbox.checked = allChecked;
+                              }
+                        });
+                  });
+            });
+      </script>
+</body>
+
+</html>

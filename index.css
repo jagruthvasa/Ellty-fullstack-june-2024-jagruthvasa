@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.element {
+  width: 400px;
+  height: 335px;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.15),
+    0px 0px 4px 2px rgba(0, 0, 0, 0);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.checkbox-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-item:hover input[type="checkbox"] {
+  background-color: #2469f6;
+  border-color: #2469f6;
+}
+
+.checkbox-item:hover input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-item:hover input[type="checkbox"]:checked {
+  background-color: #5a8afc;
+  border-color: #5a8afc;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 1.6px solid #dedede;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2469f6;
+  border-color: #2469f6;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked:hover {
+  background-color: #5a8afc;
+  border-color: #5a8afc;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.border {
+  border: 0.3px groove #dedede;
+}
+
+.button {
+  background-color: #ffce24;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #ffd84d;
+}
+
+.checkbox-scroll {
+  max-height: 160px;
+  overflow-y: scroll;
+}
+
+.checkbox-scroll::-webkit-scrollbar {
+  display: none;
+}
